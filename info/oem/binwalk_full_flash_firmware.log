@@ -1,0 +1,48 @@
+binwalk --term --signature FULL_FLASH_FIRMWARE.bin
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+151520        0x24FE0         U-Boot version string, "U-Boot 1.1.4_1.1.6 (Apr 19 2018 - 18:24:53)"
+152277        0x252D5         PNG image, 170 x 60, 8-bit/color RGBA, non-interlaced
+152355        0x25323         Zlib compressed data, best compression
+154275        0x25AA3         HTML document header
+155076        0x25DC4         HTML document footer
+155175        0x25E27         HTML document header
+156519        0x26367         HTML document footer
+156619        0x263CB         HTML document header
+156947        0x26513         HTML document footer
+157059        0x26583         HTML document header
+157434        0x266FA         HTML document footer
+157504        0x26740         CRC32 polynomial table, big endian
+327680        0x50000         uImage header, header size: 64 bytes, header CRC: 0xED4FFD5A, created: 2018-04-19 18:38:38, image size: 821566 bytes, Data
+                              Address: 0x80060000, Entry Point: 0x80060000, data CRC: 0xD1CD343, OS: Linux, CPU: MIPS, image type: OS Kernel Image, compression
+                              type: lzma, image name: "MIPS OpenWrt Linux-3.10.49"
+327744        0x50040         LZMA compressed data, properties: 0x6D, dictionary size: 8388608 bytes, uncompressed size: 2448852 bytes
+1376256       0x150000        Squashfs filesystem, little endian, version 4.0, compression:xz, size: 3900662 bytes, 954 inodes, blocksize: 262144 bytes,
+                              created: 2018-04-19 18:38:42
+5373952       0x520000        JFFS2 filesystem, big endian
+8060928       0x7B0000        gzip compressed data, maximum compression, from Unix, last modified: 2017-03-28 00:00:53
+8256900       0x7DFD84        JFFS2 filesystem, big endian
+8257536       0x7E0000        gzip compressed data, maximum compression, from Unix, last modified: 2015-05-13 00:01:38
+8388608       0x800000        uImage header, header size: 64 bytes, header CRC: 0x15469ACD, created: 2017-07-13 14:31:38, image size: 821283 bytes, Data
+                              Address: 0x80060000, Entry Point: 0x80060000, data CRC: 0xD2307D33, OS: Linux, CPU: MIPS, image type: OS Kernel Image,
+                              compression type: lzma, image name: "MIPS OpenWrt Linux-3.10.49"
+8388672       0x800040        LZMA compressed data, properties: 0x6D, dictionary size: 8388608 bytes, uncompressed size: 2448900 bytes
+9437184       0x900000        Squashfs filesystem, little endian, version 4.0, compression:xz, size: 3287390 bytes, 927 inodes, blocksize: 262144 bytes,
+                              created: 2017-08-18 11:07:06
+12899130      0xC4D33A        xz compressed data
+12988166      0xC62F06        xz compressed data
+13014472      0xC695C8        xz compressed data
+13016414      0xC69D5E        xz compressed data
+13018656      0xC6A620        xz compressed data
+13020574      0xC6AD9E        xz compressed data
+13022408      0xC6B4C8        xz compressed data
+13024470      0xC6BCD6        xz compressed data
+13024908      0xC6BE8C        xz compressed data
+13029302      0xC6CFB6        xz compressed data
+13033100      0xC6DE8C        xz compressed data
+13036594      0xC6EC32        xz compressed data
+13037720      0xC6F098        xz compressed data
+13038030      0xC6F1CE        xz compressed data
+13039960      0xC6F958        xz compressed data
+13041664      0xC70000        JFFS2 filesystem, big endian
