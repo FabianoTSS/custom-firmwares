@@ -1,0 +1,327 @@
+U-Boot 1.1.3 (Jul 25 2014 - 09:53:01)
+
+
+Board: Ralink APSoC DRAM:  64 MB
+
+relocate_code Pointer at: 83fb0000
+
+******************************
+
+Software System Reset Occurred
+
+******************************
+
+spi_wait_nsec: 30 
+
+spi device id: c2 20 17 c2 20 (2017c220)
+
+find flash: MX25L6405D
+
+raspi_read: from:30000 len:1000 
+
+.*** Warning - bad CRC, using default environment
+
+
+LED RGB UP
+
+============================================ 
+
+Ralink UBoot Version: 4.0.0.0
+
+-------------------------------------------- 
+
+ASIC 3883_MP (MAC to 100SW Mode)
+
+DRAM_CONF_FROM: Boot-Strapping 
+
+DRAM_TYPE: DDR2 
+
+DRAM_SIZE: 512 Mbits
+
+DRAM_WIDTH: 16 bits
+
+DRAM_TOTAL_WIDTH: 16 bits
+
+TOTAL_MEMORY_SIZE: 64 MBytes
+
+Flash component: SPI Flash
+
+Date:Jul 25 2014  Time:09:53:01
+
+============================================ 
+
+icache: sets:512, ways:4, linesz:32 ,total:65536
+
+dcache: sets:256, ways:4, linesz:32 ,total:32768 
+
+
+ ##### The CPU freq = 500 MHZ #### 
+
+ estimate memory size =64 Mbytes
+
+
+Please choose the operation: 
+
+   1: Load system code to SDRAM via TFTP. 
+
+   2: Load system code then write to Flash via TFTP. 
+
+   3: Boot system code via Flash (default).
+
+   4: Entr boot command line interface.
+
+   7: Load Boot Loader code then write to Flash via Serial. 
+
+   9: Load Boot Loader code then write to Flash via TFTP. 
+
+ 4  3  2  1  0 
+
+   
+
+3: System Boot system code via Flash.
+
+## Booting image at bc050000 ...
+
+raspi_read: from:50000 len:40 
+
+.   Image Name:   MIPS OpenWrt Linux-3.10.49
+
+   Created:      2020-09-28  13:17:49 UTC
+
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+
+   Data Size:    928962 Bytes = 907.2 kB
+
+   Load Address: 80000000
+
+   Entry Point:  80000000
+
+raspi_read: from:50040 len:e2cc2 
+
+...............   Verifying Checksum ... OK
+
+   Uncompressing Kernel Image ... OK
+
+No initrd
+
+## Transferring control to Linux (at address 80000000) ...
+
+## Giving linux memsize in MB, 64
+
+
+Starting kernel ...
+
+
+[    0.000000] Linux version 3.10.49 (build@runner-50ec0c25-project-43-concurrent-3) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 a00aa2) ) #1 Mon Sep 28 13:17:41 UTC 2020
+[    0.000000] SoC Type: Ralink RT3883 ver:1 eco:5
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU revision is: 0001974c (MIPS 74Kc)
+[    0.000000] MIPS: machine is AP300-ZEUS
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 04000000  @  00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x00000000-0x03ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00000000-0x03ffffff]
+[    0.000000] Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16255
+[    0.000000] Kernel command line: console=ttyS0,57600 rootfstype=squashfs,jffs2 noinitrd
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] Memory: 61980k/65532k available (2156k kernel code, 3552k reserved, 400k data, 192k init, 0k highmem)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:256
+[    0.000000] CPU Clock: 500MHz
+[    0.000000] Calibrating delay loop... 249.44 BogoMIPS (lpj=1247232)
+[    0.070000] pid_max: default: 32768 minimum: 301
+[    0.070000] Mount-cache hash table entries: 512
+[    0.080000] pinctrl core: initialized pinctrl subsystem
+[    0.090000] NET: Registered protocol family 16
+[    0.110000] bio: create slab <bio-0> at 0
+[    0.120000] rt2880_gpio 10000600.gpio: registering 24 gpios
+[    0.130000] rt2880_gpio 10000600.gpio: registering 24 irq handlers
+[    0.140000] rt2880_gpio 10000638.gpio: registering 16 gpios
+[    0.150000] Switching to clocksource MIPS
+[    0.160000] NET: Registered protocol family 2
+[    0.170000] TCP established hash table entries: 512 (order: 0, 4096 bytes)
+[    0.180000] TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+[    0.190000] TCP: Hash tables configured (established 512 bind 512)
+[    0.210000] TCP: reno registered
+[    0.210000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.220000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.240000] NET: Registered protocol family 1
+[    0.250000] rt-timer 10000100.timer: maximum frequncy is 10131Hz
+[    0.260000] Load Ralink DFS Timer Module
+[    0.280000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.290000] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.320000] msgmni has been set to 121
+[    0.320000] io scheduler noop registered (default)
+[    0.330000] Serial: 8250/16550 driver, 2 ports, IRQ sharing disabled
+[    0.350000] 10000c00.uartlite: ttyS0 at MMIO 0x10000c00 (irq = 20) is a 16550A
+[    0.360000] console [ttyS0] enabled, bootconsole disabled
+[    0.360000] console [ttyS0] enabled, bootconsole disabled
+[    0.380000] Ralink gpio driver initialized
+[    0.400000] m25p80 spi0.0: mx25l6405d (8192 Kbytes)
+[    0.410000] 4 ofpart partitions found on MTD device spi0.0
+[    0.420000] Creating 4 MTD partitions on "spi0.0":
+[    0.430000] 0x000000000000-0x000000030000 : "Bootloader"
+[    0.440000] 0x000000030000-0x000000040000 : "mib0"
+[    0.450000] 0x000000040000-0x000000050000 : "Factory"
+[    0.460000] 0x000000050000-0x000000800000 : "firmware"
+[    0.490000] 2 uimage-fw partitions found on MTD device firmware
+[    0.500000] 0x000000050000-0x000000132d02 : "kernel"
+[    0.510000] mtd: partition "kernel" must either start or end on erase block boundary or be smaller than an erase block -- forcing read-only
+[    0.540000] 0x000000132d02-0x000000800000 : "rootfs"
+[    0.550000] mtd: partition "rootfs" must either start or end on erase block boundary or be smaller than an erase block -- forcing read-only
+[    0.580000] mtd: device 5 (rootfs) set to be root filesystem
+[    0.590000] 1 squashfs-split partitions found on MTD device rootfs
+[    0.600000] 0x000000690000-0x000000800000 : "rootfs_data"
+[    0.620000] Ralink APSoC Ethernet Driver v3.2.4 (raeth)
+[    0.630000] raeth: PDMA RX ring 128, PDMA TX ring 256. Max packet size 1536
+[    0.640000] raeth: NAPI & GRO support, weight 32
+[    0.650000] rt2880_wdt 10000120.watchdog: Initialized
+[    0.660000] TCP: cubic registered
+[    0.670000] NET: Registered protocol family 17
+[    0.680000] Bridge firewalling registered
+[    0.690000] 8021q: 802.1Q VLAN Support v1.8
+[    0.710000] VFS: Mounted root (squashfs filesystem) readonly on device 31:5.
+[    0.720000] Freeing unused kernel memory: 192K (80280000 - 802b0000)
+procd: Console is alive
+procd: - watchdog -
+[    4.870000] leds-gpio gpio-leds.5: pins are not configured from the driver
+procd: - preinit -
+[    5.440000] raeth: HW IP/TCP/UDP checksum RX/TX offload enabled
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+jffs2 is ready
+No jffs2 marker was found
+[    8.870000] jffs2: notice: (257) jffs2_build_xattr_subsystem: complete building xattr subsystem, 42 of xdatum (1 unchecked, 41 orphan) and 138 of xref (0 dead, 105 orphan) found.
+switching to overlay
+procd: - early -
+procd: - watchdog -
+procd: - ubus -
+procd: - init -
+chroot: can't execute '/sbin/getty': No such file or directory
+chroot: can't execute '/sbin/getty': No such file or directory
+chroot: can't execute '/sbin/getty': No such file or directory
+chroot: can't execute '/sbin/getty': No such file or directory
+chroot: can't execute '/sbin/getty': No such file or directory
+[   12.410000] NET: Registered protocol family 10
+[   12.440000] sit: IPv6 over IPv4 tunneling driver
+[   12.470000] nf_conntrack version 0.5.0 (971 buckets, 3884 max)
+[   12.610000] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   12.680000] u32 classifier
+[   12.680000]     input device check on
+[   12.690000]     Actions configured
+[   12.710000] Mirror/redirect action on
+chroot: can't execute '/sbin/getty': No such file or directory
+[   12.770000] Initializing devdh module version (3.1) with 127 max entries. Listening on: (wlan) (ath) (ra) 
+[   12.810000] Ebtables v2.0 registered
+[   12.830000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   12.850000] Module kmod-itbnlhub initialized
+[   12.990000] xt_time: kernel timezone is -0000
+[   13.020000] PPP generic driver version 2.4.2
+[   13.030000] PPP MPPE Compression module registered
+[   13.040000] NET: Registered protocol family 24
+[   13.050000] PPP BSD Compression module registered
+[   13.070000] PPP Deflate Compression module registered
+chroot: can't execute '/sbin/getty': No such file or directory
+chroot: can't execute '/sbin/getty': No such file or directory
+chroot: can't execute '/sbin/getty': No such file or directory
+chroot: can't execute '/sbin/getty': No such file or directory
+chroot: can't execute '/sbin/getty': No such file or directory
+chroot: can't execute '/sbin/getty': No such file or directory
+chroot: can't execute '/sbin/getty': No such file or directory
+chroot: can't execute '/sbin/getty': No such file or directory
+
+
+ap300 login: [   28.390000] raeth: HW IP/TCP/UDP checksum RX/TX offload enabled
+[   28.410000] eth1: ===> VirtualIF_open
+[   34.400000] rt2860v2_ap: module license 'unspecified' taints kernel.
+[   34.420000] Disabling lock debugging due to kernel taint
+[   34.500000] 
+[   34.500000] 
+[   34.500000] === pAd = c058e000, size = 1108400 ===
+[   34.500000] 
+[   34.520000] <-- RTMPAllocTxRxRingMemory, Status=0
+[   34.530000] <-- RTMPAllocAdapterBlock, Status=0
+[   36.760000] RX DESC a20d0000  size = 8192
+[   36.820000] Key1Str is Invalid key length(0) or Type(1)
+[   36.830000] Key2Str is Invalid key length(0) or Type(1)
+[   36.840000] Key3Str is Invalid key length(0) or Type(1)
+[   36.850000] Key4Str is Invalid key length(0) or Type(1)
+[   36.870000] 1. Phy Mode = 9
+[   36.870000] 2. Phy Mode = 9
+[   36.900000] 3. Phy Mode = 9
+[   36.900000] RTMPSetPhyMode: channel is out of range, use first channel=0 
+[   36.920000] MCS Set = ff ff 00 00 01
+[   36.930000] SYNC - BBP R4 to 20MHz.l
+[   41.200000] SYNC - BBP R4 to 20MHz.l
+[   41.540000] SYNC - BBP R4 to 20MHz.l
+[   41.850000] SYNC - BBP R4 to 20MHz.l
+[   42.180000] SYNC - BBP R4 to 20MHz.l
+[   42.580000] SYNC - BBP R4 to 20MHz.l
+[   42.890000] SYNC - BBP R4 to 20MHz.l
+[   43.200000] SYNC - BBP R4 to 20MHz.l
+[   43.510000] SYNC - BBP R4 to 20MHz.l
+[   43.820000] The 2-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 2
+[   43.840000] Main bssid = 58:10:8c:63:cc:1b
+[   43.850000] <==== rt28xx_init, Status=0
+[   43.860000] 0x1300 = 00064300
+procd: - init complete -
+[   57.410000] The 2-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 2
+[   57.420000] acm_msg> ACM_MEM_Alloc_Num = 1
+[   57.430000] acm_msg> ACM_MEM_Free_Num  = 1
+[   57.500000] RtmpOSNetDevDetach(): RtmpOSNetDeviceDetach(), dev->name=ra0!
+[   58.340000] 
+[   58.340000] 
+[   58.340000] === pAd = c0d3a000, size = 1108400 ===
+[   58.340000] 
+[   58.360000] <-- RTMPAllocTxRxRingMemory, Status=0
+[   58.370000] <-- RTMPAllocAdapterBlock, Status=0
+[   60.410000] RX DESC a20c6000  size = 8192
+[   60.450000] Key1Str is Invalid key length(0) or Type(1)
+[   60.460000] Key2Str is Invalid key length(0) or Type(1)
+[   60.470000] Key3Str is Invalid key length(0) or Type(1)
+[   60.480000] Key4Str is Invalid key length(0) or Type(1)
+[   60.490000] 1. Phy Mode = 9
+[   60.500000] 2. Phy Mode = 9
+[   60.510000] 3. Phy Mode = 9
+[   60.510000] RTMPSetPhyMode: channel is out of range, use first channel=0 
+[   60.530000] MCS Set = ff ff 00 00 01
+[   60.540000] SYNC - BBP R4 to 20MHz.l
+[   63.150000] SYNC - BBP R4 to 20MHz.l
+[   63.460000] SYNC - BBP R4 to 20MHz.l
+[   63.770000] SYNC - BBP R4 to 20MHz.l
+[   64.080000] SYNC - BBP R4 to 20MHz.l
+[   64.390000] SYNC - BBP R4 to 20MHz.l
+[   64.700000] SYNC - BBP R4 to 20MHz.l
+[   65.010000] SYNC - BBP R4 to 20MHz.l
+[   65.320000] SYNC - BBP R4 to 20MHz.l
+[   65.630000] The 2-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 2
+[   65.650000] Main bssid = 58:10:8c:63:cc:1b
+[   65.660000] <==== rt28xx_init, Status=0
+[   65.670000] 0x1300 = 00064300
+
+
+ap300 login: admin
+Password: 
+
+-----------------------------------------------------------------
+  _____ _   _ _______ ______ _      ____  _____             _____
+ |_   _| \ | |__   __|  ____| |    |  _ \|  __ \     /\    / ____|
+   | | |  \| |  | |  | |__  | |    | |_) | |__) |   /  \  | (___
+   | | | . ` |  | |  |  __| | |    |  _ <|  _  /   / /\ \  \___ \
+  _| |_| |\  |  | |  | |____| |____| |_) | | \ \  / ____ \ ____) |
+ |_____|_| \_|  |_|  |______|______|____/|_|  \_\/_/    \_\_____/
+ 
+------------------------------------------------------------------        
+ 
+                  Tue Aug  2 10:24:46 BRT 2022
+# 
