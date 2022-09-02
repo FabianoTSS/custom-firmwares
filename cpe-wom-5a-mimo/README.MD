@@ -1,0 +1,1 @@
+Here is some informations and the original Firmware from the Intelbras CPE WOM 5A MiMo. I can't continue because my router is broken, if you want to give me a new one, i'll be happy. heheh
