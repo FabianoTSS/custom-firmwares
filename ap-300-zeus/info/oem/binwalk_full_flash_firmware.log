@@ -1,0 +1,16 @@
+binwalk --term --signature FULL_FLASH_FIRMWARE.bin
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0             0x0             uImage header, header size: 64 bytes, header CRC: 0x2C0CA698, created: 2014-07-25 12:53:05, image size: 118892 bytes, Data Address: 0x80200000,
+                              Entry Point: 0x80200000, data CRC: 0xB482A835, OS: Linux, CPU: MIPS, image type: Standalone Program, compression type: none, image name: "SPI
+                              Flash Image"
+92192         0x16820         U-Boot version string, "U-Boot 1.1.3 (Jul 25 2014 - 09:53:01)"
+92784         0x16A70         CRC32 polynomial table, little endian
+327680        0x50000         uImage header, header size: 64 bytes, header CRC: 0x6DC6EF70, created: 2020-09-28 13:17:49, image size: 928962 bytes, Data Address: 0x80000000,
+                              Entry Point: 0x80000000, data CRC: 0xFF9A7AA3, OS: Linux, CPU: MIPS, image type: OS Kernel Image, compression type: lzma, image name: "MIPS
+                              OpenWrt Linux-3.10.49"
+327744        0x50040         LZMA compressed data, properties: 0x6D, dictionary size: 8388608 bytes, uncompressed size: 2779604 bytes
+1256706       0x132D02        Squashfs filesystem, little endian, version 4.0, compression:xz, size: 5587948 bytes, 1992 inodes, blocksize: 262144 bytes, created: 2020-09-28
+                              13:17:47
+6881280       0x690000        JFFS2 filesystem, little endian
