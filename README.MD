@@ -1,1 +1,1 @@
-This project contents some codes, firmwares and a builder that can compile a OpenWRT Firmware to the Intelbras CPE WOM 5A MiMo. For now, this repository have only some informations.
+This project contents some codes, information, firmwares and a builder about intelbras routers to study and then compile the OpenWRT Firmware support. For now, this repository has only some informations.
