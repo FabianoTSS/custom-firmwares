@@ -1,0 +1,10 @@
+binwalk --term --signature factory-oem-image.bin
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+20            0x14            uImage header, header size: 64 bytes, header CRC: 0x6DC6EF70, created: 2020-09-28 13:17:49, image size: 928962 bytes, Data Address:
+                              0x80000000, Entry Point: 0x80000000, data CRC: 0xFF9A7AA3, OS: Linux, CPU: MIPS, image type: OS Kernel Image, compression type: lzma,
+                              image name: "MIPS OpenWrt Linux-3.10.49"
+84            0x54            LZMA compressed data, properties: 0x6D, dictionary size: 8388608 bytes, uncompressed size: 2779604 bytes
+929046        0xE2D16         Squashfs filesystem, little endian, version 4.0, compression:xz, size: 5587948 bytes, 1992 inodes, blocksize: 262144 bytes, created:
+                              2020-09-28 13:17:47
