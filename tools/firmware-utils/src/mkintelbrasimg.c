@@ -171,7 +171,6 @@ int main(int argc, char ** argv) {
 		    usage(EXIT_FAILURE);
 	    }
 	    memcpy(header.magic, optarg, 8);
-      printf("Case: m %s", header.magic);
 	    break;
     default:
       usage(EXIT_FAILURE);
@@ -200,7 +199,7 @@ int main(int argc, char ** argv) {
   }
 
   ifinfo.size = st.st_size;
-  printf("%d", ifinfo.size);
+  //printf("%d", ifinfo.size);
 }
 
 /*
