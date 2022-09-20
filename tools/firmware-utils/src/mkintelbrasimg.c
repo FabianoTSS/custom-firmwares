@@ -13,7 +13,7 @@
 3-create a md5sum 
 4-write the sum on the top of the file
 
-#Need a program to receive args
+#Need a program to receive args - OK
 #Need a program to read
 #Need a program to write
 #Need a program to get md5sum
@@ -40,7 +40,7 @@
 #define TRUE 1
 
 struct header {
-  unsigned char magic[8];
+  char * magic;
 }
 __attribute__((packed));
 
@@ -71,6 +71,7 @@ static void usage(int status) {
   exit(status);
 }
 
+/*
 static int strtou32(char * arg, unsigned int * val) {
   char * endptr = NULL;
 
@@ -81,10 +82,10 @@ static int strtou32(char * arg, unsigned int * val) {
   }
 
   return EXIT_FAILURE;
-}
-
+}*/
+/*
 static unsigned short fwcsum(struct buf * buf) {
-  /*int i;
+  int i;
     unsigned short ret = 0;
 
     for (i = 0; i < buf->size / 2; i++) {
@@ -94,9 +95,9 @@ static unsigned short fwcsum(struct buf * buf) {
 	    ret -= HOST_TO_BE16(((unsigned short *) buf->start)[i]);
     }
     
-    return ret;*/
+    return ret;
 }
-
+*/
 //finfo->name receives the directory and file to read
 static int fwread(struct finfo * finfo, struct buf * buf) {
   FILE * f;
@@ -166,11 +167,23 @@ int main(int argc, char ** argv) {
     case 'm':
       printf("Case: m\n");
       printf("Output Magic Is = %s\n", optarg);
-	    if (strlen(optarg) != 8) {
+
+      //optarg = "\xd8\x0d\xb2\xa1";
+      //header.magic = optarg;
+	    /*if (strlen(optarg) != 16) {
 		    fprintf(stderr, "magic must be 8 characters long\n");
 		    usage(EXIT_FAILURE);
 	    }
-	    memcpy(header.magic, optarg, 8);
+	    memcpy(header.magic, optarg, 8);*/
+        FILE *fp;
+   //char str = hexstring_to_ascii(header.magic);
+
+   fp = fopen( "file.bin" , "wb" );
+   //fwrite(header.magic , 1 , sizeof(header.magic) , fp );
+   fwrite(optarg, 1 , sizeof(optarg) , fp );
+
+   fclose(fp);
+
 	    break;
     default:
       usage(EXIT_FAILURE);
@@ -197,7 +210,12 @@ int main(int argc, char ** argv) {
     fprintf(stderr, "no magic specified\n");
     usage(EXIT_FAILURE);
   }
+  
+  printf("This is the string Magic:%c\n\n", header.magic);
 
+
+
+  //fwwrite(ifinfo.name, hexstring_to_ascii(header.magic));
   ifinfo.size = st.st_size;
   //printf("%d", ifinfo.size);
 }
