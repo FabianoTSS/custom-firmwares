@@ -1,0 +1,223 @@
+U-Boot 1.1.4-gd9cb4a90-dirty (Feb 27 2018 - 13:29:04)
+
+ap151 - Dragonfly 1.0
+
+DRAM:  64 MB
+Top of RAM usable for U-Boot at: 84000000
+Reserving 281k for U-Boot at: 83fb8000
+Reserving 192k for malloc() at: 83f88000
+Reserving 44 Bytes for Board Info at: 83f87fd4
+Reserving 36 Bytes for Global Data at: 83f87fb0
+Reserving 128k for boot params() at: 83f67fb0
+Stack Pointer at: 83f67f98
+Now running in RAM - U-Boot at: 83fb8000
+Flash Manuf Id 0xef, DeviceId0 0x40, DeviceId1 0x17
+flash size 8MB, sector count = 128
+Flash:  8 MB
+Using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Net:   ath_gmac_enet_initialize...
+No valid address in Flash. Using fixed address
+No valid address in Flash. Using fixed address
+ath_gmac_enet_initialize: reset mask:c02200
+Dragonfly----> S27 PHY *
+: cfg1 0x80000000 cfg2 0x7114
+eth0: 00:03:7f:09:0b:ad
+athrs27_phy_setup ATHR_PHY_CONTROL 0 :1000
+athrs27_phy_setup ATHR_PHY_SPEC_STAUS 0 :10
+eth0 up
+ATHRS27: resetting s27
+ATHRS27: s27 reset done
+: cfg1 0x800c0000 cfg2 0x7214
+eth1: 00:03:7f:09:0b:ad
+athrs27_phy_setup ATHR_PHY_CONTROL 1 :1000
+athrs27_phy_setup ATHR_PHY_SPEC_STAUS 1 :50
+athrs27_phy_setup ATHR_PHY_CONTROL 2 :1000
+athrs27_phy_setup ATHR_PHY_SPEC_STAUS 2 :10
+athrs27_phy_setup ATHR_PHY_CONTROL 3 :1000
+athrs27_phy_setup ATHR_PHY_SPEC_STAUS 3 :10
+athrs27_phy_setup ATHR_PHY_CONTROL 4 :1000
+athrs27_phy_setup ATHR_PHY_SPEC_STAUS 4 :10
+eth1 up
+eth0, eth1
+Setting 0x181162c0 to 0x82
+Autobooting in 1 seconds
+## Booting image at 9f010000 ...
+   Verifying Checksum at 0x9f010040 ...OK
+   Uncompressing Multi-File Image ... OK
+No initrd
+## Transferring control to Linux (at address 80060000) ...
+## Giving linux memsize in bytes, 67108864
+
+Starting kernel ...
+
+[    0.000000] Linux version 5.15.120 (administrator@debian) (mips-openwrt-linux-musl-gcc (OpenWrt GCC 12.3.0 r23282-57e7188e6                                                                       3) 12.3.0, GNU ld (GNU Binutils) 2.40.0) #0 Thu Jul 27 15:12:01 2023
+[    0.000000] printk: bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00019750 (MIPS 74Kc)
+[    0.000000] MIPS: machine is TP-Link TL-WR941HP v2
+[    0.000000] SoC: Qualcomm Atheros TP9343 rev 0
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x0000000003ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x0000000003ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x0000000003ffffff]
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 16240
+[    0.000000] Kernel command line: console=ttyS0,115200n8 rootfstype=squashfs,jffs2
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes, linear)
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 55920K/65536K available (5653K kernel code, 585K rwdata, 1240K rodata, 1216K init, 207K bss, 9616K rese                                                                       rved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS: 51
+[    0.000000] CPU clock: 750.000 MHz
+[    0.000000] clocksource: MIPS: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 5096694524 ns
+[    0.000002] sched_clock: 32 bits at 375MHz, resolution 2ns, wraps every 5726622718ns
+[    0.008319] Calibrating delay loop... 373.55 BogoMIPS (lpj=1867776)
+[    0.074912] pid_max: default: 32768 minimum: 301
+[    0.080717] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.088440] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.103781] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.114232] futex hash table entries: 256 (order: -1, 3072 bytes, linear)
+[    0.121649] pinctrl core: initialized pinctrl subsystem
+[    0.128999] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.154128] clocksource: Switched to clocksource MIPS
+[    0.160971] NET: Registered PF_INET protocol family
+[    0.166500] IP idents hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.174968] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 4096 bytes, linear)
+[    0.183843] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.192084] TCP established hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.200193] TCP bind hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.207652] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.214569] UDP hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.221511] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.229448] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.235553] PCI: CLS 0 bytes, default 32
+[    0.244193] workingset: timestamp_bits=14 max_order=14 bucket_order=0
+[    0.256108] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.262285] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.277484] pinctrl-single 1804002c.pinmux: 544 pins, size 68
+[    0.285159] Serial: 8250/16550 driver, 1 ports, IRQ sharing disabled
+[    0.292703] printk: console [ttyS0] disabled
+[    0.297376] 18020000.uart: ttyS0 at MMIO 0x18020000 (irq = 9, base_baud = 1562500) is a 16550A
+[    0.306527] printk: console [ttyS0] enabled
+[    0.306527] printk: console [ttyS0] enabled
+[    0.315602] printk: bootconsole [early0] disabled
+[    0.315602] printk: bootconsole [early0] disabled
+[    0.341886] spi-nor spi0.0: s25fl064k (8192 Kbytes)
+[    0.347102] 4 fixed-partitions partitions found on MTD device spi0.0
+[    0.353757] OF: Bad cell count for /ahb/spi@1f000000/flash@0/partitions
+[    0.360672] OF: Bad cell count for /ahb/spi@1f000000/flash@0/partitions
+[    0.367938] OF: Bad cell count for /ahb/spi@1f000000/flash@0/partitions
+[    0.374879] OF: Bad cell count for /ahb/spi@1f000000/flash@0/partitions
+[    0.382357] Creating 4 MTD partitions on "spi0.0":
+[    0.387396] 0x000000000000-0x000000010000 : "u-boot"
+[    0.399738] 0x000000010000-0x0000007e0000 : "firmware"
+[    0.406478] 2 fixed-partitions partitions found on MTD device firmware
+[    0.413323] OF: Bad cell count for /ahb/spi@1f000000/flash@0/partitions
+[    0.420641] Creating 2 MTD partitions on "firmware":
+[    0.425849] 0x000000000000-0x000000240000 : "kernel"
+[    0.436978] 0x000000240000-0x0000007d0000 : "rootfs"
+[    0.443406] mtd: setting mtd3 (rootfs) as root device
+[    0.449968] 1 squashfs-split partitions found on MTD device rootfs
+[    0.456460] 0x0000005a0000-0x0000007d0000 : "rootfs_data"
+[    0.463369] 0x0000007e0000-0x0000007f0000 : "mib0"
+[    0.471785] 0x0000007f0000-0x000000800000 : "art"
+[    0.885226] ag71xx 19000000.eth: Could not connect to PHY device. Deferring probe.
+[    1.580642] switch0: Atheros AR8229 rev. 1 switch registered on mdio.0
+[    1.651248] ag71xx 1a000000.eth: connected to PHY at fixed-0:00 [uid=00000000, driver=Generic PHY]
+[    1.661308] eth0: Atheros AG71xx at 0xba000000, irq 5, mode: gmii
+[    1.668194] i2c_dev: i2c /dev entries driver
+[    1.676073] NET: Registered PF_INET6 protocol family
+[    1.696200] Segment Routing with IPv6
+[    1.700115] In-situ OAM (IOAM) with IPv6
+[    1.704401] NET: Registered PF_PACKET protocol family
+[    1.709737] 8021q: 802.1Q VLAN Support v1.8
+[    2.057707] ag71xx 19000000.eth: connected to PHY at mdio.0:1f:00 [uid=004dd042, driver=Generic PHY]
+[    2.068384] eth1: Atheros AG71xx at 0xb9000000, irq 4, mode: mii
+[    2.087585] VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+[    2.104732] Freeing unused kernel image (initmem) memory: 1216K
+[    2.110866] This architecture does not have kernel memory protection.
+[    2.117565] Run /sbin/init as init process
+[    2.806172] init: Console is alive
+[    2.810376] init: - watchdog -
+[    3.914768] kmodloader: loading kernel modules from /etc/modules-boot.d/*
+[    3.993104] kmodloader: done loading kernel modules from /etc/modules-boot.d/*
+[    4.012030] init: - preinit -
+[    5.471111] random: jshn: uninitialized urandom read (4 bytes read)
+[    5.864231] random: jshn: uninitialized urandom read (4 bytes read)
+[    6.020028] random: jshn: uninitialized urandom read (4 bytes read)
+[    6.793959] eth0: link up (1000Mbps/Full duplex)
+[    6.804311] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    6.811271] IPv6: ADDRCONF(NETDEV_CHANGE): eth0.1: link becomes ready
+[    6.834671] random: procd: uninitialized urandom read (4 bytes read)
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[    9.108029] mount_root: jffs2 not ready yet, using temporary tmpfs overlay
+[    9.119972] urandom-seed: Seed file not found (/etc/urandom.seed)
+[    9.206598] eth0: link down
+[    9.235237] procd: - early -
+[    9.238662] procd: - watchdog -
+[    9.975496] procd: - watchdog -
+[    9.980832] procd: - ubus -
+[   10.084944] random: ubusd: uninitialized urandom read (4 bytes read)
+[   10.094903] random: ubusd: uninitialized urandom read (4 bytes read)
+[   10.109170] random: ubusd: uninitialized urandom read (4 bytes read)
+[   10.121894] procd: - init -
+Please press Enter to activate this console.
+[   11.166009] random: jshn: uninitialized urandom read (4 bytes read)
+[   11.225864] random: ubusd: uninitialized urandom read (4 bytes read)
+[   11.232900] random: ubus: uninitialized urandom read (4 bytes read)
+[   11.336380] kmodloader: loading kernel modules from /etc/modules.d/*
+[   11.705946] urngd: v1.0.2 started.
+[   11.848221] random: crng init done
+[   11.851768] random: 24 urandom warning(s) missed due to ratelimiting
+[   11.876787] Loading modules backported from Linux version v6.1.24-0-g0102425ac76b
+[   11.884604] Backport generated by backports.git v5.15.92-1-44-gd6ea70fafd36
+[   12.383777] PPP generic driver version 2.4.2
+[   12.392243] NET: Registered PF_PPPOX protocol family
+[   12.478768] ieee80211 phy0: Atheros AR9561 Rev:0 mem=0xb8100000, irq=2
+[   12.540297] kmodloader: done loading kernel modules from /etc/modules.d/*
+[   57.696597] jffs2_scan_eraseblock(): End of filesystem marker found at 0x0
+[   57.703743] jffs2_build_filesystem(): unlocking the mtd device...
+[   57.703750] done.
+[   57.712196] jffs2_build_filesystem(): erasing all blocks after the end marker...
+[   59.588726] eth0: link up (1000Mbps/Full duplex)
+[   59.627373] br-lan: port 1(eth0.1) entered blocking state
+[   59.632992] br-lan: port 1(eth0.1) entered disabled state
+[   59.638982] device eth0.1 entered promiscuous mode
+[   59.643956] device eth0 entered promiscuous mode
+[   59.658572] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   59.715614] br-lan: port 1(eth0.1) entered blocking state
+[   59.721231] br-lan: port 1(eth0.1) entered forwarding state
+[   60.664238] IPv6: ADDRCONF(NETDEV_CHANGE): br-lan: link becomes ready
+[   69.188579] done.
+[   69.190621] jffs2: notice: (1942) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked,                                                                        0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+[   69.384084] overlayfs: upper fs does not support tmpfile.
+
+
+
+BusyBox v1.36.1 (2023-07-27 00:08:48 UTC) built-in shell (ash)
+
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ -----------------------------------------------------
+ OpenWrt 23.05-SNAPSHOT, r23288-0a1fe730e1
+ -----------------------------------------------------
+=== WARNING! =====================================
+There is no root password defined on this device!
+Use the "passwd" command to set up a new password
+in order to prevent unauthorized SSH logins.
+--------------------------------------------------
+root@OpenWrt:/#
